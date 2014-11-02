@@ -1,14 +1,12 @@
-package com.jeanchampemont.movieplanner.service.cinemaservice.internal;
+package com.jeanchampemont.movieplanner.service.cinema.internal;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import com.jeanchampemont.movieplanner.db.entity.Cinema;
 import com.jeanchampemont.movieplanner.utils.DurationUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.converter.FormHttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
@@ -32,7 +30,6 @@ public class CinemaRemoteService {
 
     private Log log = LogFactory.getLog(CinemaRemoteService.class);
 
-    @Cacheable("cinemas")
     public List<Cinema> getCinemas() {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new FormHttpMessageConverter());

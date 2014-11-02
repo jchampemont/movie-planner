@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Getter @Setter
+@Getter @Setter @NoArgsConstructor
 public class Movie implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,4 +1,4 @@
-package com.jeanchampemont.movieplanner.service.cinemaservice.internal;
+package com.jeanchampemont.movieplanner.service.cinema.internal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

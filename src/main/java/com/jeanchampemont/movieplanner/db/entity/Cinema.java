@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Getter @Setter
+@Getter @Setter @NoArgsConstructor
 @NamedQuery(name = "Cinema.deleteAll",
     query = "DELETE FROM Cinema")
 public class Cinema implements Serializable {
